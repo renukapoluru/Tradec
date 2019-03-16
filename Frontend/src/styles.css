@@ -1,0 +1,120 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    width:100%;
+    max-width:100%;
+    padding:0 0px;
+    font: 100%/1.5 'Source Sans Pro',Arial,sans-serif;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1210px;
+    padding:0 20px;
+    margin: 0 auto;
+    float: none;
+}
+
+*:focus {
+    outline:none;
+}
+
+.all-text-white,
+.all-text-white h1,
+.all-text-white h2,
+.all-text-white h3,
+.all-text-white h4,
+.all-text-white h5,
+.all-text-white h6,
+.all-text-white p {
+    color:#fff;
+}
+
+.align-center {
+    text-align: center;
+}
+
+/* Form Styles */
+
+form .input{
+    width:49%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+form .input:nth-child(2n) {
+    margin-left:2%;
+}
+
+form input,
+form select,
+form textarea{
+    width: 100%;
+    font-family: 'Source Sans Pro',sans-serif;
+}
+
+input {
+    background: #ffffff;
+    border:0;
+    border-bottom:1px solid #e1e1e1;
+    padding: 10px 15px;
+    display: block;
+    width: 100%;
+    appearance: none;
+    margin:10px 0;
+    font-family:'Source Sans Pro', sans-serif;
+}
+
+select {
+    background: #ffffff url(assets/dropdown.png);
+    border:1px solid #e1e1e1;
+    padding: 10px 15px;
+    display: block;
+    width: 100%;
+    appearance: none;
+    margin:10px 0;    
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-position-x: 97.5%;
+    background-size: 10px;
+}
+
+input[type="submit"] {
+    background: #ec041a;
+    border: 1px solid #ec041a;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro',sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    max-width: 400px;
+    margin: 20px auto 0;
+    cursor: pointer;
+    opacity:0.5;
+    pointer-events:none;
+}
+
+span.error{
+    display:block;
+    width:100%;
+    max-width:400px;
+    margin:10px auto 0;
+    font-size:14px;
+    font-weight:bold;
+    color:red;
+    text-align:center;
+}
+
+input[type="submit"].valid{
+    opacity:1;
+    pointer-events: auto;
+}
+
+input[type="submit"]:hover {
+    background:transparent;
+    color:#ec041a;
+}

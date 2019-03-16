@@ -1,0 +1,73 @@
+<app-header></app-header>
+
+<div class="main-content">
+		<div class="container">
+				<div class="add-todo">
+					<a class="show-filters" (click)="showFilters()"><img [src]="!showingFilters ? './assets/filters.png' : './assets/filter-icon-color.png'"></a>
+					<form *ngIf="showingFilters" [formGroup]="filtersForm" (ngSubmit)="filterData()">
+						<div class="input">
+							<select formControlName="sortby">
+								<option value=''>Sort By</option>
+								<option *ngFor="let option of sortOptions" [ngValue]="option.value"> {{ option.name }}</option>
+							</select>
+						</div>
+						<div class="input date">
+							<label>Select a Time Period</label>
+							<input type="date" formControlName="minDate">
+							<input type="date" max="{{ currentDate }}" formControlName="maxDate">
+						</div>
+						<div class="input">
+							<input type="search" placeholder="Search" formControlName="search">
+						</div>
+						<div class="input">
+							<select formControlName="symbol">
+								<option value=''>Select Symbol</option>
+								<option value="{{ singleItem }}" *ngFor="let singleItem of companyData">{{ singleItem }}</option>
+							</select>
+						</div>
+					</form>
+				</div>
+				<div class="loader align-center" *ngIf="!dataFetched">
+					<img src="./assets/loader.gif">
+				</div>
+			<div *ngIf="dataFetched" class="list-stock-items" [ngClass]="{'show-all-results' : showingFilteredData }">
+				<div *ngIf="showingFilteredData">
+					<div class="column">
+						<h4>Showing <span>&apos;Filtered&apos;</span> Results:</h4>
+					</div>
+					<div class="column">
+						<h4><a (click)="showAllResults()">Show All Results</a></h4>
+					</div>
+				</div>
+				<table border="1">
+					<tr>
+						<th>Party A</th>
+						<th>Party B</th>
+						<th>Type Of Operation</th>
+						<th>Contract Date</th>
+						<th>We Buy currency</th>
+						<th>We Buy Amount</th>
+						<th>We Sell currency</th>
+						<th>We Sell Amount</th>
+						<th>Status</th>
+					</tr>
+					<tr *ngFor="let item of StockData">
+						<td>{{ item['Party A'] }}</td>
+						<td>{{ item['Party B'] }}</td>
+						<td>{{ item['Type of Operation'] }}</td>
+						<td>{{ item['Contract Date'] | date:  "dd/MM/yyyy" }}</td>
+						<td>{{ item['We Buy currency'] }}</td>
+						<td>{{ item['We Buy Amount'] }}</td>
+						<td>{{ item['We Sell Ccy'] }}</td>
+						<td>{{ item['We Sell Amount'] }}</td>
+						<td> {{ item.status }} </td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="pagination" *ngIf="dataFetched">
+		<ul>
+			<li *ngFor="let i of pagesArray; let i=index;" (click)="pageNumber(i)"  [ngClass]="{'active' : currentPage === i}">{{ i }}</li>
+		</ul>
+	</div>

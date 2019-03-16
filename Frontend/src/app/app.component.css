@@ -1,0 +1,256 @@
+/* Main Content */
+
+.main-content {
+    padding:70px 0;
+}
+
+/* Loader */
+
+.loader {
+    padding:50px 0;
+}
+
+.loader img {
+    max-width:100%;
+}
+
+/* Show Company Results */
+
+.show-filters {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.show-filters img{
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 36px;
+}
+
+.show-company-results h4 span {
+    color:#ec041a;
+}
+
+.show-company-results .column {
+    display: inline-block;
+    vertical-align: middle;
+    width:49%;
+}
+
+.show-company-results .column:last-child{
+    margin-left:2%;
+    text-align:right;
+}
+
+.show-company-results th:first-child, 
+.show-company-results td:first-child {
+    display: none;
+}
+
+.show-company-results h4 {
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.date label {
+    display:block;
+}
+
+.date input{
+    width:49%;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.date input:last-child {
+    margin-left:2%;
+}
+
+
+
+/* Stock Item */
+
+.list-stock-items {
+    margin-top:60px;
+}
+
+.list-stock-items td.open .percentage {
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    padding-left: 14px;
+    position: relative;
+    margin-left: 5px;
+}
+
+.list-stock-items td.open.increase .percentage {
+    color: green;
+}
+
+.list-stock-items td.open.decrease .percentage {
+    color: red;
+}
+
+.list-stock-items td.open.nochange .percentage {
+    color: #27c7fb;
+    padding-left: 12px;
+}
+
+.list-stock-items td.open.decrease {
+    color: rgba(255, 0, 0, 0.8);
+}
+
+.list-stock-items td.open.increase {
+    color: rgba(8, 205, 8, 0.92);
+}
+
+.list-stock-items td.open.nochange {
+    color: rgb(17, 175, 226);
+}
+
+
+.list-stock-items td.open.increase .percentage:before {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid green;
+    position: absolute;
+    content: '';
+    bottom: 5px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.list-stock-items td.open.decrease .percentage:before {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid red;
+    position: absolute;
+    content: '';
+    bottom: 5px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.list-stock-items td.open.nochange .percentage:before {
+    width: 0; 
+    height: 0; 
+    border:3px solid #27c7fb;
+    position: absolute;
+    content: '';
+    bottom: 5px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+}
+
+table, 
+table tr{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    width:14.28%;
+    padding:10px 15px;
+    text-align: left;
+}
+
+table tr td:first-child a {
+    color:#ec041a;
+    cursor: pointer;
+}
+
+.stock-item{
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 20px;
+}
+
+.stock-details {
+    display:none;
+    transition:all ease-in-out .3s;
+    top:-100%;
+    position:relative;
+}
+
+.active .stock-details{
+    top:0;
+    display: block;
+}
+
+/* Show All Results */
+
+.show-all-results h4 span {
+    color:#ec041a;
+}
+
+.show-all-results .column {
+    display: inline-block;
+    vertical-align: middle;
+    width:49%;
+}
+
+.show-all-results .column:last-child{
+    margin-left:2%;
+    text-align:right;
+}
+
+.show-all-results h4 {
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+/* Pagination */
+
+.pagination{
+    padding-bottom:80px;
+}
+
+.pagination ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.pagination ul li {
+    display: inline-block;
+    padding: 5px 5px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #e1e1e1;
+    margin: 0 10px;
+    cursor:pointer;
+}
+
+.pagination ul li.active{
+    background:#ec041a;
+    color:#ffffff;
+}

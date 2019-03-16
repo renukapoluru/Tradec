@@ -1,0 +1,56 @@
+.header {
+    padding: 3.125rem 0 3.75rem 0;
+    position: relative;
+    display: none;
+}
+
+.header:after{
+    position:absolute;
+    content:'';
+    height:1px;
+    border-bottom: 1px solid #e1e1e1;
+    max-width: 1170px;
+    left:0;
+    right:0;
+    bottom: 0;
+    margin:0 auto;
+}
+
+.header .column{
+    width:50%;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.header .forexo{
+    padding-left:1%;
+    text-align: right;
+}
+
+.header .forexo img{
+    max-height:35px;
+}
+
+.logo a{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo > a {
+    margin-left: 0.6rem;
+}
+
+.logo > a > img {
+    height: 35px;
+}
+
+.logo .text-logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo .text-logo img{
+    height: 58px;
+    width: auto;
+}
+
